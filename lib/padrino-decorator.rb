@@ -1,4 +1,2 @@
-module Padrino
-  module Decorator
-  end
-end
+require 'padrino-decorator/version'
+require 'padrino-decorator/base'
