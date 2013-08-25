@@ -1,0 +1,7 @@
+--title 'Padrino Decorator Documentation'
+--charset utf-8
+--protected
+--markup-provider=redcarpet
+--markup=markdown
+--exclude lib/padrino-decorator/generators/components
+lib/**/*.rb

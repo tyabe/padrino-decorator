@@ -8,5 +8,10 @@ group :test do
   gem 'minitest',   '~> 4.0'
   gem 'mocha',      '>= 0.10.0'
   gem 'turn'
+end
+
+group :development do
   gem 'yard',       '>= 0.7.2'
+  gem 'redcarpet'
+  gem 'github-markup'
 end
