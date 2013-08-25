@@ -1,0 +1,1 @@
+apply_test_component_for_decorator_by(:rspec)
