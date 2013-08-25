@@ -6,3 +6,4 @@ Gemfile.lock
 doc/
 .DS_Store
 tags
+pkg/*
