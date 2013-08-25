@@ -12,6 +12,6 @@ end
 
 group :development do
   gem 'yard',       '>= 0.7.2'
-  gem 'redcarpet'
+  gem 'kramdown'
   gem 'github-markup'
 end
