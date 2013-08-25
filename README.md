@@ -17,7 +17,7 @@ And then execute:
 $ bundle
 ```
 
-## Controller Generator
+## Decorator Generator
 
 Padrino provides generator support for quickly creating new decorators within your Padrino application.
 Note that the decorator tests are generated specifically tailored towards the testing framework chosen during application generation.
