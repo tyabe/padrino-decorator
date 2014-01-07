@@ -1,12 +1,11 @@
 class <%= @object_name.camelize %>Decorator < Padrino::Decorator::Base
-  decorate :<%= @object_name %>
   context <%= @project_name %>::<%= @app_name %>
 
   # def decorated_method
   #  # We can use a specified object through the accessor method.
   #  # Also can use a helper method in specified context through the 'h' method.
-  #  if <%= @object_name %>.present?
-  #    h.content_tag :span, <%= @object_name %>.to_s
+  #  if object.present?
+  #    h.content_tag :span, object.to_s
   #  else
   #    h.content_tag :span, 'None'
   #  end

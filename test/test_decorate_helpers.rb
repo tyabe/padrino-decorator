@@ -1,6 +1,7 @@
 require File.expand_path("#{File.dirname(__FILE__)}/helpers/helper")
 
 describe Padrino::Decorator::DecorateHelpers do
+
   class User
     attr_accessor :username, :full_name
     def initialize(attributes = {})
@@ -9,16 +10,15 @@ describe Padrino::Decorator::DecorateHelpers do
       end
     end
   end
+
   class UserDecorator < Padrino::Decorator::Base
-    decorate :user
     def name
-      user.full_name.present? ? user.full_name : user.username
+      object.full_name.present? ? object.full_name : object.username
     end
   end
   class UsersDecorator < Padrino::Decorator::Base
-    decorate :users
     def name_list
-      users.map{|u| h.decorate(u).name}
+      object.map{|u| h.decorate(u).name}
     end
   end
 

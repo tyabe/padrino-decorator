@@ -3,19 +3,12 @@ module Padrino
   module Decorator
     class Base < SimpleDelegator
 
-      class << self
+      attr_reader :object
 
-        def decorate(name)
-          define_method(name) do
-            @model
-          end
-        end
-
-      end # ClassMethods
-      def initialize(model, options = {})
-        @model = model
+      def initialize(object, options = {})
+        @object = object
         @context = options[:context]
-        super(model)
+        super(object)
       end
 
       def to_model
