@@ -6,6 +6,7 @@ Adds an object-oriented layer of presentation logic to your Padrino application.
 [![Build Status](https://travis-ci.org/tyabe/padrino-decorator.png?branch=master)](https://travis-ci.org/tyabe/padrino-decorator)
 [![Code Climate](https://codeclimate.com/github/tyabe/padrino-decorator.png)](https://codeclimate.com/github/tyabe/padrino-decorator)
 [![Coverage Status](https://coveralls.io/repos/tyabe/padrino-decorator/badge.png)](https://coveralls.io/r/tyabe/padrino-decorator)
+[![Dependency Status](https://gemnasium.com/tyabe/padrino-decorator.png)](https://gemnasium.com/tyabe/padrino-decorator)
 
 ## Installation
 
