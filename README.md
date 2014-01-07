@@ -70,6 +70,44 @@ $ padrino-gen decorator User
   </tbody>
 </table>
 
+## Examples
+
+```ruby
+# app/controllers/posts.rb
+SampleProject::App.controllers :posts do
+
+  get :index do
+    source = Post.all
+    @posts = decorate(source)
+    render 'posts/index'
+  end
+
+  get :show, with: :id do
+    source = Post.find(params[:id])
+    @post = decorate(source)
+    # or
+    @post = PostDecorator.new(source, context: self)
+    render 'posts/show'
+  end
+
+end
+
+# app/decorators/post_decorator.rb
+class PostDecorator < Padrino::Decorator::Base
+  context SampleProject::App
+
+  def formated_body
+    h.simple_format(object.body)
+  end
+
+end
+
+# app/views/posts/show.slim
+h1 = @post.title
+div
+  = @post.formated_body
+```
+
 ## Contributing
 
 1. Fork it
