@@ -11,3 +11,8 @@ require 'turn'
 class MiniTest::Spec
   include Rack::Test::Methods
 end
+
+if ENV['TRAVIS']
+  require 'coveralls'
+  Coveralls.wear!
+end

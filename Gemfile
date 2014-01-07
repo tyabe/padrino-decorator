@@ -3,6 +3,10 @@ source 'https://rubygems.org'
 gemspec
 gem 'rake'
 
+group :development, :test do
+  gem 'coveralls', :require => false
+end
+
 group :test do
   gem 'rack-test',  '>= 0.5.0'
   gem 'minitest',   '~> 4.0'
