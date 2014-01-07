@@ -16,24 +16,21 @@ describe Padrino::Decorator::DecorateHelpers do
       object.full_name.present? ? object.full_name : object.username
     end
   end
-  class UsersDecorator < Padrino::Decorator::Base
-    def name_list
-      object.map{|u| h.decorate(u).name}
-    end
-  end
 
   include Padrino::Decorator::DecorateHelpers
 
   describe '.decorate' do
+    let(:dorothy) { User.new(username: 'Dorothy', full_name: 'Dorothy Gale') }
+    let(:toto)    { User.new(username: 'Toto') }
+
     it 'Possible to decorate the single object' do
-      user = User.new(username: 'Dorothy', full_name: 'Dorothy Gale')
-      assert_equal decorate(user).name, user.full_name
+      assert_equal decorate(dorothy).name, dorothy.full_name
     end
     it 'Possible to decorate the collections' do
       users = []
-      users << User.new(username: 'Dorothy')
-      users << User.new(username: 'Toto')
-      assert_equal decorate(users).name_list, %w[Dorothy Toto]
+      users << dorothy
+      users << toto
+      assert_equal decorate(users).first.name, dorothy.full_name
     end
   end
 
