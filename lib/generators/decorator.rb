@@ -41,7 +41,10 @@ module Padrino
           check_app_existence(app)
           inject_into_file(destination_root(app, "app.rb"), "    register Padrino::Decorator::Helpers\n", :after => "Padrino::Application\n")
           self.behavior = :revoke if options[:destroy]
-          @object_name    = name.to_s.underscore
+          @object_name  = name.to_s.underscore
+          @project_name = options[:namespace].underscore.camelize
+          @project_name = fetch_project_name(app) if @project_name.empty?
+          @app_name     = fetch_app_name(app)
           template 'templates/decorator.rb.tt', destination_root(app, 'decorators', "#{@object_name}_decorator.rb")
           if test?
             choice = fetch_component_choice(:test)

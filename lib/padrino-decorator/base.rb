@@ -12,10 +12,9 @@ module Padrino
         end
 
       end # ClassMethods
-
-      def initialize(model, context)
+      def initialize(model, options = {})
         @model = model
-        @context = context
+        @context = options[:context]
         super(model)
       end
 
@@ -42,8 +41,12 @@ module Padrino
 
       private
 
-      def h
-        @context
+      def self.context(context)
+        _helper_method_name = :h
+        define_method(_helper_method_name) do
+          @context || context.to_s.camelize.constantize.new!
+        end
+        private _helper_method_name
       end
 
     end # Base

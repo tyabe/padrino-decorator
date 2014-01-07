@@ -1,5 +1,6 @@
 class <%= @object_name.camelize %>Decorator < Padrino::Decorator::Base
   decorate :<%= @object_name %>
+  context <%= @project_name %>::<%= @app_name %>
 
   # def decorated_method
   #  # We can use a specified object through the accessor method.
