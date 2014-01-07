@@ -4,6 +4,7 @@ padrino-decorator is a gem for [Padrino](http://www.padrinorb.com/).
 Adds an object-oriented layer of presentation logic to your Padrino application.
 
 [![Build Status](https://travis-ci.org/tyabe/padrino-decorator.png?branch=master)](https://travis-ci.org/tyabe/padrino-decorator)
+[![Code Climate](https://codeclimate.com/github/tyabe/padrino-decorator.png)](https://codeclimate.com/github/tyabe/padrino-decorator)
 
 ## Installation
 
