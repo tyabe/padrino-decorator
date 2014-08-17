@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rdoc_options  = ["--charset=UTF-8"]
 
-  s.add_dependency("padrino-core", "> 0.11")
-  s.add_dependency "padrino-gen",  "> 0.11.0"
-  s.add_dependency "padrino-helpers", "> 0.11.0"
+  s.add_dependency("padrino-core", "~> 0.12.3")
+  s.add_dependency "padrino-gen",  "~> 0.12.3"
+  s.add_dependency "padrino-helpers", "~> 0.12.3"
 end
