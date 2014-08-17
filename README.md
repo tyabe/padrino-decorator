@@ -10,6 +10,8 @@ Adds an object-oriented layer of presentation logic to your Padrino application.
 
 ## Installation
 
+Note: Version 0.0.3 or later work with Padrino 0.12.3 later.
+
 Add the following to your `Gemfile`:
 
 ```ruby
