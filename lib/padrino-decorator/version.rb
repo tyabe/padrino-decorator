@@ -1,6 +1,6 @@
 module Padrino
   module Decorator
-    VERSION = '0.0.3' unless defined?(Padrino::Decorator::VERSION)
+    VERSION = '0.0.4' unless defined?(Padrino::Decorator::VERSION)
 
     def self.version
       VERSION
