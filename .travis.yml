@@ -1,18 +1,27 @@
-lang: ruby
-before_install: gem install bundler --pre
+language: ruby
+sudo: false
+cache: bundler
+before_install:
+  - gem install bundler --pre
 install:
-  - gem update --system
   - bundle update
 rvm:
+  - rbx-2
+  - jruby
+  - jruby-head
   - 1.9.3
   - 2.0.0
   - 2.1.1
-  - rbx
-  - jruby
+  - 2.2.2
+  - 2.3.3
+  - 2.4.0
+  - ruby-head
 branches:
   only:
     - master
 matrix:
   allow_failures:
-    - rvm: rbx
+    - rvm: rbx-2
     - rvm: jruby
+    - rvm: jruby-head
+    - rvm: ruby-head
