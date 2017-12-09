@@ -4,7 +4,7 @@ require 'spec_helper'
 describe "!NAME!Decorator" do
   it 'can construct a new instance' do
     object = "Sample"
-    @!DNAME! = !NAME!Decorator.new(object, self)
+    @!DNAME! = !NAME!Decorator.new(object, context: self)
     expect(@!DNAME!).to eql object
   end
 end
