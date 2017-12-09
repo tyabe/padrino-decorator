@@ -13,7 +13,7 @@ describe Padrino::Decorator::DecorateHelpers do
 
   class UserDecorator < Padrino::Decorator::Base
     def name
-      object.full_name.present? ? object.full_name : object.username
+      object.full_name.prepend ? object.full_name : object.username
     end
   end
 
