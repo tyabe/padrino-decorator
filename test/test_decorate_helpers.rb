@@ -13,7 +13,7 @@ describe Padrino::Decorator::DecorateHelpers do
 
   class UserDecorator < Padrino::Decorator::Base
     def name
-      object.full_name.present? ? object.full_name : object.username
+      object.full_name.nil? ? object.username : object.full_name
     end
   end
 
@@ -26,6 +26,7 @@ describe Padrino::Decorator::DecorateHelpers do
     it 'Possible to decorate the single object' do
       assert_equal decorate(dorothy).name, dorothy.full_name
     end
+
     it 'Possible to decorate the collections' do
       users = []
       users << dorothy
